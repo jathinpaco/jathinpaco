@@ -1,12 +1,6 @@
 
 pipeline {
     agent any 
-
-    parameters {
-        string(name: 'ciBuildVersion', defaultValue: '1.0.0', description: 'Build version')
-        choice(name: 'ciBuildEnv', choices: ['prod', 'dev', 'staging'], description: 'Build environment')
-    }
-
     stages {
         stage('Dependencies') {
             steps {
@@ -26,11 +20,6 @@ pipeline {
                 }
             }
         }
-
- 
-         
-
-
         stage('Package') {
             steps {
                 echo 'Packaging the binary...'
