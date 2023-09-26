@@ -19,7 +19,7 @@ pipeline {
                 echo 'Building the binary...'
                 }
             }
-        }
+        
         stage('Package') {
             steps {
                 echo 'Packaging the binary...'
