@@ -7,7 +7,6 @@ pipeline {
                 echo 'Fetching dependencies...'
             }
         }
-
         stage('Test') {
             steps {
                 echo 'Running tests...'
